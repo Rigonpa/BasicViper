@@ -20,6 +20,12 @@
 		93BBE06224F6646F001AA655 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBE06124F6646F001AA655 /* Manager.swift */; };
 		93BBE06424F665A8001AA655 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBE06324F665A8001AA655 /* ServiceManager.swift */; };
 		93BBE06724F66E0C001AA655 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBE06624F66E0C001AA655 /* NavigationManager.swift */; };
+		93E3760724F6B2D8006CD5EB /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760624F6B2D8006CD5EB /* HomeRouter.swift */; };
+		93E3760924F6B30E006CD5EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760824F6B30E006CD5EB /* LoginView.swift */; };
+		93E3760B24F6B87E006CD5EB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760A24F6B87E006CD5EB /* HomePresenter.swift */; };
+		93E3760D24F6B88C006CD5EB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760C24F6B88C006CD5EB /* HomeViewController.swift */; };
+		93E3760F24F6B896006CD5EB /* HomeContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760E24F6B896006CD5EB /* HomeContract.swift */; };
+		93E3761124F6B8A4006CD5EB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3761024F6B8A4006CD5EB /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +45,12 @@
 		93BBE06124F6646F001AA655 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		93BBE06324F665A8001AA655 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		93BBE06624F66E0C001AA655 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		93E3760624F6B2D8006CD5EB /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		93E3760824F6B30E006CD5EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		93E3760A24F6B87E006CD5EB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		93E3760C24F6B88C006CD5EB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		93E3760E24F6B896006CD5EB /* HomeContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContract.swift; sourceTree = "<group>"; };
+		93E3761024F6B8A4006CD5EB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		95F5980C05FD68CD7BF714B3 /* Pods-BasicViper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicViper.debug.xcconfig"; path = "Target Support Files/Pods-BasicViper/Pods-BasicViper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +81,7 @@
 				9393D25624F679F500172953 /* LoginPresenter.swift */,
 				9393D25824F67A0000172953 /* LoginViewController.swift */,
 				9393D25A24F67A2B00172953 /* LoginContract.swift */,
+				93E3760824F6B30E006CD5EB /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -76,6 +89,7 @@
 		9393D25C24F6A79000172953 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				93E3760524F6B2B9006CD5EB /* Home */,
 				9393D25324F679BA00172953 /* Login */,
 			);
 			path = Scenes;
@@ -130,6 +144,18 @@
 				93BBE06624F66E0C001AA655 /* NavigationManager.swift */,
 			);
 			path = Infraestructure;
+			sourceTree = "<group>";
+		};
+		93E3760524F6B2B9006CD5EB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				93E3760624F6B2D8006CD5EB /* HomeRouter.swift */,
+				93E3760A24F6B87E006CD5EB /* HomePresenter.swift */,
+				93E3760C24F6B88C006CD5EB /* HomeViewController.swift */,
+				93E3760E24F6B896006CD5EB /* HomeContract.swift */,
+				93E3761024F6B8A4006CD5EB /* HomeView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		FA0A5078CD4E9B1ADF4453DE /* Pods */ = {
@@ -255,14 +281,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				93BBE04E24F661F1001AA655 /* AppDelegate.swift in Sources */,
+				93E3760724F6B2D8006CD5EB /* HomeRouter.swift in Sources */,
 				93BBE06224F6646F001AA655 /* Manager.swift in Sources */,
 				9393D25724F679F500172953 /* LoginPresenter.swift in Sources */,
+				93E3760F24F6B896006CD5EB /* HomeContract.swift in Sources */,
+				93E3761124F6B8A4006CD5EB /* HomeView.swift in Sources */,
 				9393D25524F679E600172953 /* LoginRouter.swift in Sources */,
+				93E3760D24F6B88C006CD5EB /* HomeViewController.swift in Sources */,
 				9393D25B24F67A2B00172953 /* LoginContract.swift in Sources */,
 				9393D25924F67A0000172953 /* LoginViewController.swift in Sources */,
+				93E3760B24F6B87E006CD5EB /* HomePresenter.swift in Sources */,
 				9393D26124F6A8E800172953 /* CustomView.swift in Sources */,
 				93BBE05024F661F1001AA655 /* SceneDelegate.swift in Sources */,
 				9393D25F24F6A7CA00172953 /* CustomViewController.swift in Sources */,
+				93E3760924F6B30E006CD5EB /* LoginView.swift in Sources */,
 				93BBE06424F665A8001AA655 /* ServiceManager.swift in Sources */,
 				93BBE06724F66E0C001AA655 /* NavigationManager.swift in Sources */,
 			);

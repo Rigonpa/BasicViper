@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  HomeViewController.swift
 //  BasicViper
 //
 //  Created by Ricardo González Pacheco on 26/08/2020.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class LoginViewController: CustomViewController {
-    var presenter: LoginProtocolViewControllerToPresenter?
+class HomeViewController: CustomViewController {
     
-    var v: LoginView {
+    var presenter: HomeProtocolViewControllerToPresenter?
+    
+    var v: HomeView {
         get {
-            guard let vi = view as? LoginView else {
-                return LoginView()
+            guard let vi = view as? HomeView else {
+                return HomeView()
             }
             return vi
         }
@@ -35,14 +36,14 @@ class LoginViewController: CustomViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        v.toYellowButton.addTarget(self, action: #selector(toYellowScreenAction), for: .touchUpInside)
+        v.toOrangeButton.addTarget(self, action: #selector(toOrangeScreenAction), for: .touchUpInside)
     }
     
-    @objc private func toYellowScreenAction() {
-        presenter?.toYellowScreenAction()
+    @objc private func toOrangeScreenAction() {
+        presenter?.toOrangeScreenAction()
     }
 }
 
-extension LoginViewController: LoginProtocolPresenterToViewController {
+extension HomeViewController: HomeProtocolPresenterToViewController {
     
 }

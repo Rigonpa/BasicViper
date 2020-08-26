@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+protocol LoginProtocolViewControllerToPresenter: class {
+//    var viewController: LoginProtocolPresenterToViewController? { get set }
+//    var router: LoginProtocolPresenterToRouter? { get set }
+    
+    func toYellowScreenAction()
+}
+
+protocol LoginProtocolPresenterToRouter: class {
+    func toYellowScreenAction()
+}
+
+protocol LoginProtocolPresenterToViewController: class {
+    
+}

@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+class LoginPresenter {
+    
+    weak var viewController: LoginProtocolPresenterToViewController?
+    var router: LoginProtocolPresenterToRouter?
+}
+
+extension LoginPresenter: LoginProtocolViewControllerToPresenter {
+    func toYellowScreenAction() {
+        router?.toYellowScreenAction()
+    }
+}

@@ -1,5 +1,5 @@
 //
-//  LoginRouter.swift
+//  HomeRouter.swift
 //  BasicViper
 //
 //  Created by Ricardo González Pacheco on 26/08/2020.
@@ -8,12 +8,12 @@
 
 import UIKit
 
-class LoginRouter {
+class HomeRouter {
     
     static func createModule() -> CustomViewController {
-        let presenter = LoginPresenter()
-        let router = LoginRouter()
-        let viewController = LoginViewController()
+        let presenter = HomePresenter()
+        let router = HomeRouter()
+        let viewController = HomeViewController()
         
         presenter.router = router
         presenter.viewController = viewController
@@ -23,12 +23,11 @@ class LoginRouter {
     }
 }
 
-extension LoginRouter: LoginProtocolPresenterToRouter {
-    func toYellowScreenAction() {
+extension HomeRouter: HomeProtocolPresenterToRouter {
+    func toOrangeScreenAction() {
         let sceneDelegate: SceneDelegate? = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
-        guard let homeViewController = HomeRouter.createModule() as? HomeViewController, let mainNavManager = sceneDelegate?.window?.rootViewController as? UINavigationController else { return }
+        guard let mainNavManager = sceneDelegate?.window?.rootViewController as? UINavigationController else { return }
         
-        mainNavManager.pushViewController(homeViewController, animated: true)
-        
+        mainNavManager.popViewController(animated: true)
     }
 }
