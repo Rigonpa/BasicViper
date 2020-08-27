@@ -9,7 +9,7 @@
 import UIKit
 
 protocol TakePhotoDelegate: class {
-    func loginButtonTapped()
+    func loginButtonTappedTakePhoto()
     func catalogButtonTapped()
 }
 
@@ -36,6 +36,6 @@ extension TakePhotoRouter: TakePhotoProtocolPresenterToRouter {
     }
     
     func loginButtonTapped() {
-        delegate?.loginButtonTapped()
+        delegate?.loginButtonTappedTakePhoto()
     }
 }

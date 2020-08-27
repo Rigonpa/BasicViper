@@ -12,7 +12,7 @@ class MainFlow: FlowCoordinator {
     var name: String? = "MainFlow"
     var flowNavManager: UINavigationController?
     
-    var photoFlow: PhotoFlow?
+    var takePhotoButtonTappedAction: (() -> Void)?
     
     func startFlow() -> UINavigationController? {
         guard let loginVC = LoginRouter.createModule() as? LoginViewController,
@@ -54,12 +54,10 @@ extension MainFlow: HomeDelegate {
 
 extension MainFlow: CatalogDelegate {
     func takePhotoButtonTapped() {
-        photoFlow = PhotoFlow()
-        guard let photoNavManager = photoFlow?.startFlow() else { return }
-        flowNavManager?.present(photoNavManager, animated: true, completion: nil)
+        takePhotoButtonTappedAction?()
     }
     
-    func loginButtonTapped() {
+    func loginButtonTappedCatalog() {
         flowNavManager?.popToRootViewController(animated: true)
     }
 }

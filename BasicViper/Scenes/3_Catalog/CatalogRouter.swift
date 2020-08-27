@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CatalogDelegate: class {
-    func loginButtonTapped()
+    func loginButtonTappedCatalog()
     func takePhotoButtonTapped()
 }
 
@@ -36,6 +36,6 @@ extension CatalogRouter: CatalogProtocolPresenterToRouter {
     }
     
     func loginButtonTapped() {
-        delegate?.loginButtonTapped()
+        delegate?.loginButtonTappedCatalog()
     }
 }

@@ -12,7 +12,8 @@ class PhotoFlow: FlowCoordinator {
     var flowNavManager: UINavigationController?
     var name: String? = "PhotoFlow"
     
-    var loginButtonTappedAction: (() -> Void)?
+    var loginButtonTappedActionTakePhoto: (() -> Void)?
+    var loginButtonTappedActionCatalog: (() -> Void)?
     
     func startFlow() -> UINavigationController? {
         guard let takePhotoVC = TakePhotoRouter.createModule() as? TakePhotoViewController,
@@ -34,13 +35,17 @@ extension PhotoFlow: TakePhotoDelegate {
         flowNavManager?.pushViewController(catalogVC, animated: true)
     }
     
-    func loginButtonTapped() {
-        loginButtonTappedAction?()
+    func loginButtonTappedTakePhoto() {
+        loginButtonTappedActionTakePhoto?()
     }
 }
 
 extension PhotoFlow: CatalogDelegate {
     func takePhotoButtonTapped() {
         // No event allowed
+    }
+    
+    func loginButtonTappedCatalog() {
+        loginButtonTappedActionCatalog?()
     }
 }

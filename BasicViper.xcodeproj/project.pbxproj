@@ -167,7 +167,7 @@
 		93BBE06524F666D7001AA655 /* Infraestructure */ = {
 			isa = PBXGroup;
 			children = (
-				93DE4C9D24F7A06E005DF131 /* Flow */,
+				93DE4C9D24F7A06E005DF131 /* Flows */,
 				93BBE06124F6646F001AA655 /* Manager.swift */,
 				93BBE06324F665A8001AA655 /* ServiceManager.swift */,
 				93BBE06624F66E0C001AA655 /* NavigationManager.swift */,
@@ -187,14 +187,14 @@
 			path = 3_Catalog;
 			sourceTree = "<group>";
 		};
-		93DE4C9D24F7A06E005DF131 /* Flow */ = {
+		93DE4C9D24F7A06E005DF131 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
 				93DE4C9E24F7A08E005DF131 /* FlowCoordinator.swift */,
 				93DE4CA024F7A0A0005DF131 /* MainFlow.swift */,
 				93DE4CAD24F7C8A4005DF131 /* PhotoFlow.swift */,
 			);
-			path = Flow;
+			path = Flows;
 			sourceTree = "<group>";
 		};
 		93DE4CA224F7C55E005DF131 /* 4_TakePhoto */ = {

@@ -53,16 +53,16 @@ class TakePhotoView: CustomView {
             make.size.equalTo(snp.size)
         }
         
-        view.addSubview(loginButton)
-        loginButton.snp.remakeConstraints { make in
+        view.addSubview(catalogButton)
+        catalogButton.snp.remakeConstraints { make in
             make.centerX.equalTo(snp.centerX)
             make.centerY.equalTo(snp.centerY)
         }
         
-        view.addSubview(catalogButton)
-        catalogButton.snp.remakeConstraints { make in
+        view.addSubview(loginButton)
+        loginButton.snp.remakeConstraints { make in
             make.centerX.equalTo(snp.centerX)
-            make.top.equalTo(loginButton.snp.bottom).offset(64)
+            make.top.equalTo(catalogButton.snp.bottom).offset(64)
         }
     }
 }

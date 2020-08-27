@@ -53,16 +53,16 @@ class CatalogView: CustomView {
             make.size.equalTo(snp.size)
         }
         
-        view.addSubview(loginButton)
-        loginButton.snp.remakeConstraints { make in
+        view.addSubview(takePhotoButton)
+        takePhotoButton.snp.remakeConstraints { make in
             make.centerX.equalTo(snp.centerX)
             make.centerY.equalTo(snp.centerY)
         }
         
-        view.addSubview(takePhotoButton)
-        takePhotoButton.snp.remakeConstraints { make in
+        view.addSubview(loginButton)
+        loginButton.snp.remakeConstraints { make in
             make.centerX.equalTo(snp.centerX)
-            make.top.equalTo(loginButton.snp.bottom).offset(64)
+            make.top.equalTo(takePhotoButton.snp.bottom).offset(64)
         }
     }
 }
