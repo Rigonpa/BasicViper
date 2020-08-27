@@ -8,14 +8,14 @@
 
 import UIKit
 
-class HomeViewController: CustomViewController {
+class CatalogViewController: CustomViewController {
     
-    var presenter: HomeProtocolViewControllerToPresenter?
+    var presenter: CatalogProtocolViewControllerToPresenter?
     
-    var v: HomeView {
+    var v: CatalogView {
         get {
-            guard let vi = view as? HomeView else {
-                return HomeView()
+            guard let vi = view as? CatalogView else {
+                return CatalogView()
             }
             return vi
         }
@@ -36,20 +36,15 @@ class HomeViewController: CustomViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Home"
-        v.catalogButton.addTarget(self, action: #selector(catalogButtonTapped), for: .touchUpInside)
-        v.logoutButton.addTarget(self, action: #selector(logoutButtonTapped), for: .touchUpInside)
+        title = "Catalog"
+        v.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
-    @objc private func catalogButtonTapped() {
-        presenter?.catalogButtonTapped()
-    }
-    
-    @objc private func logoutButtonTapped() {
-        presenter?.logoutButtonTapped()
+    @objc private func loginButtonTapped() {
+        presenter?.loginButtonTapped()
     }
 }
 
-extension HomeViewController: HomeProtocolPresenterToViewController {
+extension CatalogViewController: CatalogProtocolPresenterToViewController {
     
 }

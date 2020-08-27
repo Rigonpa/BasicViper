@@ -14,7 +14,11 @@ class HomePresenter {
 }
 
 extension HomePresenter: HomeProtocolViewControllerToPresenter {
-    func toOrangeScreenAction() {
-        router?.toOrangeScreenAction()
+    func logoutButtonTapped() {
+        router?.logoutButtonTapped()
+    }
+    
+    func catalogButtonTapped() {
+        router?.catalogButtonTapped()
     }
 }

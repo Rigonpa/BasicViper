@@ -9,14 +9,16 @@
 import Foundation
 
 protocol HomeProtocolViewControllerToPresenter: class {
-//    var viewController: HomeProtocolPresenterToViewController? { get set }
-//    var router: HomeProtocolPresenterToRouter? { get set }
+    var viewController: HomeProtocolPresenterToViewController? { get set }
+    var router: HomeProtocolPresenterToRouter? { get set }
     
-    func toOrangeScreenAction()
+    func catalogButtonTapped()
+    func logoutButtonTapped()
 }
 
 protocol HomeProtocolPresenterToRouter: class {
-    func toOrangeScreenAction()
+    func catalogButtonTapped()
+    func logoutButtonTapped()
 }
 
 protocol HomeProtocolPresenterToViewController: class {

@@ -8,19 +8,18 @@
 
 import UIKit
 
-protocol HomeDelegate: class {
-    func logoutButtonTapped()
-    func catalogButtonTapped()
+protocol CatalogDelegate: class {
+    func loginButtonTapped()
 }
 
-class HomeRouter {
+class CatalogRouter {
     
-    weak var delegate: HomeDelegate?
+    weak var delegate: CatalogDelegate?
     
     static func createModule() -> CustomViewController {
-        let presenter = HomePresenter()
-        let router = HomeRouter()
-        let viewController = HomeViewController()
+        let presenter = CatalogPresenter()
+        let router = CatalogRouter()
+        let viewController = CatalogViewController()
         
         viewController.presenter = presenter
         viewController.presenter?.router = router
@@ -30,12 +29,8 @@ class HomeRouter {
     }
 }
 
-extension HomeRouter: HomeProtocolPresenterToRouter {
-    func logoutButtonTapped() {
-        delegate?.logoutButtonTapped()
-    }
-    
-    func catalogButtonTapped() {
-        delegate?.catalogButtonTapped()
+extension CatalogRouter: CatalogProtocolPresenterToRouter {
+    func loginButtonTapped() {
+        delegate?.loginButtonTapped()
     }
 }

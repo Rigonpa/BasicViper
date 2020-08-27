@@ -9,14 +9,14 @@
 import Foundation
 
 protocol LoginProtocolViewControllerToPresenter: class {
-//    var viewController: LoginProtocolPresenterToViewController? { get set }
-//    var router: LoginProtocolPresenterToRouter? { get set }
+    var viewController: LoginProtocolPresenterToViewController? { get set }
+    var router: LoginProtocolPresenterToRouter? { get set }
     
-    func toYellowScreenAction()
+    func homeButtonTapped()
 }
 
 protocol LoginProtocolPresenterToRouter: class {
-    func toYellowScreenAction()
+    func homeButtonTapped()
 }
 
 protocol LoginProtocolPresenterToViewController: class {

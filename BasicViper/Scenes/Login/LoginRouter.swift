@@ -8,27 +8,27 @@
 
 import UIKit
 
+protocol LoginDelegate: class {
+    func homeButtonTapped()
+}
+
 class LoginRouter {
-    
+    weak var delegate: LoginDelegate?
     static func createModule() -> CustomViewController {
         let presenter = LoginPresenter()
         let router = LoginRouter()
         let viewController = LoginViewController()
         
-        presenter.router = router
-        presenter.viewController = viewController
         viewController.presenter = presenter
+        viewController.presenter?.router = router
+        viewController.presenter?.viewController = viewController
         
         return viewController
     }
 }
 
 extension LoginRouter: LoginProtocolPresenterToRouter {
-    func toYellowScreenAction() {
-        let sceneDelegate: SceneDelegate? = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate
-        guard let homeViewController = HomeRouter.createModule() as? HomeViewController, let mainNavManager = sceneDelegate?.window?.rootViewController as? UINavigationController else { return }
-        
-        mainNavManager.pushViewController(homeViewController, animated: true)
-        
+    func homeButtonTapped() {
+        delegate?.homeButtonTapped()
     }
 }

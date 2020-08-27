@@ -35,11 +35,12 @@ class LoginViewController: CustomViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        v.toYellowButton.addTarget(self, action: #selector(toYellowScreenAction), for: .touchUpInside)
+        title = "Login"
+        v.homeButton.addTarget(self, action: #selector(homeButtonTapped), for: .touchUpInside)
     }
     
-    @objc private func toYellowScreenAction() {
-        presenter?.toYellowScreenAction()
+    @objc private func homeButtonTapped() {
+        presenter?.homeButtonTapped()
     }
 }
 

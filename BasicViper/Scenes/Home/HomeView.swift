@@ -11,9 +11,20 @@ import SnapKit
 
 class HomeView: CustomView {
     
-    lazy var toOrangeButton: UIButton = {
+    lazy var catalogButton: UIButton = {
         let btn = UIButton()
-        btn.setTitle("  To orange screen  ", for: .normal)
+        btn.setTitle("  Catalog  ", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.layer.cornerRadius = 5.0
+        btn.layer.borderWidth = 1.0
+        btn.layer.borderColor = UIColor.black.cgColor
+        btn.layer.masksToBounds = false
+        return btn
+    }()
+    
+    lazy var logoutButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("  Logout  ", for: .normal)
         btn.setTitleColor(.black, for: .normal)
         btn.layer.cornerRadius = 5.0
         btn.layer.borderWidth = 1.0
@@ -34,8 +45,7 @@ class HomeView: CustomView {
     }
     
     private func setupUI() {
-        view.backgroundColor = .yellow
-        
+        view.backgroundColor = .gray
         addSubview(view)
         view.snp.remakeConstraints { make in
             make.leading.equalTo(snp.leading)
@@ -43,10 +53,16 @@ class HomeView: CustomView {
             make.size.equalTo(snp.size)
         }
         
-        view.addSubview(toOrangeButton)
-        toOrangeButton.snp.remakeConstraints { make in
+        view.addSubview(catalogButton)
+        catalogButton.snp.remakeConstraints { make in
             make.centerX.equalTo(snp.centerX)
             make.centerY.equalTo(snp.centerY)
+        }
+        
+        view.addSubview(logoutButton)
+        logoutButton.snp.remakeConstraints { make in
+            make.centerX.equalTo(snp.centerX)
+            make.top.equalTo(catalogButton.snp.bottom).offset(64)
         }
     }
 }

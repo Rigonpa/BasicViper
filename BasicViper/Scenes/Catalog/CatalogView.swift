@@ -1,5 +1,5 @@
 //
-//  LoginView.swift
+//  HomeView.swift
 //  BasicViper
 //
 //  Created by Ricardo González Pacheco on 26/08/2020.
@@ -9,11 +9,11 @@
 import UIKit
 import SnapKit
 
-class LoginView: CustomView {
+class CatalogView: CustomView {
     
-    lazy var homeButton: UIButton = {
+    lazy var loginButton: UIButton = {
         let btn = UIButton()
-        btn.setTitle("  Home  ", for: .normal)
+        btn.setTitle("  Login  ", for: .normal)
         btn.setTitleColor(.black, for: .normal)
         btn.layer.cornerRadius = 5.0
         btn.layer.borderWidth = 1.0
@@ -34,7 +34,7 @@ class LoginView: CustomView {
     }
     
     private func setupUI() {
-        view.backgroundColor = .orange
+        view.backgroundColor = .blue
         addSubview(view)
         view.snp.remakeConstraints { make in
             make.leading.equalTo(snp.leading)
@@ -42,10 +42,12 @@ class LoginView: CustomView {
             make.size.equalTo(snp.size)
         }
         
-        view.addSubview(homeButton)
-        homeButton.snp.remakeConstraints { make in
+        view.addSubview(loginButton)
+        loginButton.snp.remakeConstraints { make in
             make.centerX.equalTo(snp.centerX)
             make.centerY.equalTo(snp.centerY)
         }
     }
 }
+
+

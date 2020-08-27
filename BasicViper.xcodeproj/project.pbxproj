@@ -20,6 +20,13 @@
 		93BBE06224F6646F001AA655 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBE06124F6646F001AA655 /* Manager.swift */; };
 		93BBE06424F665A8001AA655 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBE06324F665A8001AA655 /* ServiceManager.swift */; };
 		93BBE06724F66E0C001AA655 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BBE06624F66E0C001AA655 /* NavigationManager.swift */; };
+		93DE4C9424F79A99005DF131 /* CatalogRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4C9324F79A99005DF131 /* CatalogRouter.swift */; };
+		93DE4C9624F79AB8005DF131 /* CatalogPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4C9524F79AB8005DF131 /* CatalogPresenter.swift */; };
+		93DE4C9824F79AC2005DF131 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4C9724F79AC2005DF131 /* CatalogViewController.swift */; };
+		93DE4C9A24F79ACC005DF131 /* CatalogContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4C9924F79ACC005DF131 /* CatalogContract.swift */; };
+		93DE4C9C24F79AD4005DF131 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4C9B24F79AD4005DF131 /* CatalogView.swift */; };
+		93DE4C9F24F7A08E005DF131 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4C9E24F7A08E005DF131 /* FlowCoordinator.swift */; };
+		93DE4CA124F7A0A0005DF131 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4CA024F7A0A0005DF131 /* MainFlow.swift */; };
 		93E3760724F6B2D8006CD5EB /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760624F6B2D8006CD5EB /* HomeRouter.swift */; };
 		93E3760924F6B30E006CD5EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760824F6B30E006CD5EB /* LoginView.swift */; };
 		93E3760B24F6B87E006CD5EB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760A24F6B87E006CD5EB /* HomePresenter.swift */; };
@@ -45,6 +52,13 @@
 		93BBE06124F6646F001AA655 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 		93BBE06324F665A8001AA655 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		93BBE06624F66E0C001AA655 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		93DE4C9324F79A99005DF131 /* CatalogRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogRouter.swift; sourceTree = "<group>"; };
+		93DE4C9524F79AB8005DF131 /* CatalogPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogPresenter.swift; sourceTree = "<group>"; };
+		93DE4C9724F79AC2005DF131 /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		93DE4C9924F79ACC005DF131 /* CatalogContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogContract.swift; sourceTree = "<group>"; };
+		93DE4C9B24F79AD4005DF131 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		93DE4C9E24F7A08E005DF131 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		93DE4CA024F7A0A0005DF131 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
 		93E3760624F6B2D8006CD5EB /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		93E3760824F6B30E006CD5EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		93E3760A24F6B87E006CD5EB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -89,6 +103,7 @@
 		9393D25C24F6A79000172953 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				93DE4C9224F79A26005DF131 /* Catalog */,
 				93E3760524F6B2B9006CD5EB /* Home */,
 				9393D25324F679BA00172953 /* Login */,
 			);
@@ -139,11 +154,33 @@
 		93BBE06524F666D7001AA655 /* Infraestructure */ = {
 			isa = PBXGroup;
 			children = (
+				93DE4C9D24F7A06E005DF131 /* Flow */,
 				93BBE06124F6646F001AA655 /* Manager.swift */,
 				93BBE06324F665A8001AA655 /* ServiceManager.swift */,
 				93BBE06624F66E0C001AA655 /* NavigationManager.swift */,
 			);
 			path = Infraestructure;
+			sourceTree = "<group>";
+		};
+		93DE4C9224F79A26005DF131 /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				93DE4C9324F79A99005DF131 /* CatalogRouter.swift */,
+				93DE4C9524F79AB8005DF131 /* CatalogPresenter.swift */,
+				93DE4C9724F79AC2005DF131 /* CatalogViewController.swift */,
+				93DE4C9924F79ACC005DF131 /* CatalogContract.swift */,
+				93DE4C9B24F79AD4005DF131 /* CatalogView.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		93DE4C9D24F7A06E005DF131 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				93DE4C9E24F7A08E005DF131 /* FlowCoordinator.swift */,
+				93DE4CA024F7A0A0005DF131 /* MainFlow.swift */,
+			);
+			path = Flow;
 			sourceTree = "<group>";
 		};
 		93E3760524F6B2B9006CD5EB /* Home */ = {
@@ -280,22 +317,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93DE4C9824F79AC2005DF131 /* CatalogViewController.swift in Sources */,
 				93BBE04E24F661F1001AA655 /* AppDelegate.swift in Sources */,
 				93E3760724F6B2D8006CD5EB /* HomeRouter.swift in Sources */,
 				93BBE06224F6646F001AA655 /* Manager.swift in Sources */,
 				9393D25724F679F500172953 /* LoginPresenter.swift in Sources */,
 				93E3760F24F6B896006CD5EB /* HomeContract.swift in Sources */,
+				93DE4C9A24F79ACC005DF131 /* CatalogContract.swift in Sources */,
 				93E3761124F6B8A4006CD5EB /* HomeView.swift in Sources */,
 				9393D25524F679E600172953 /* LoginRouter.swift in Sources */,
 				93E3760D24F6B88C006CD5EB /* HomeViewController.swift in Sources */,
 				9393D25B24F67A2B00172953 /* LoginContract.swift in Sources */,
+				93DE4C9624F79AB8005DF131 /* CatalogPresenter.swift in Sources */,
 				9393D25924F67A0000172953 /* LoginViewController.swift in Sources */,
 				93E3760B24F6B87E006CD5EB /* HomePresenter.swift in Sources */,
+				93DE4CA124F7A0A0005DF131 /* MainFlow.swift in Sources */,
 				9393D26124F6A8E800172953 /* CustomView.swift in Sources */,
+				93DE4C9F24F7A08E005DF131 /* FlowCoordinator.swift in Sources */,
 				93BBE05024F661F1001AA655 /* SceneDelegate.swift in Sources */,
 				9393D25F24F6A7CA00172953 /* CustomViewController.swift in Sources */,
 				93E3760924F6B30E006CD5EB /* LoginView.swift in Sources */,
+				93DE4C9C24F79AD4005DF131 /* CatalogView.swift in Sources */,
 				93BBE06424F665A8001AA655 /* ServiceManager.swift in Sources */,
+				93DE4C9424F79A99005DF131 /* CatalogRouter.swift in Sources */,
 				93BBE06724F66E0C001AA655 /* NavigationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
