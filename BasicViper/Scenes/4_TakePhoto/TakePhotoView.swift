@@ -9,11 +9,22 @@
 import UIKit
 import SnapKit
 
-class CatalogView: CustomView {
+class TakePhotoView: CustomView {
     
     lazy var loginButton: UIButton = {
         let btn = UIButton()
         btn.setTitle("  Login  ", for: .normal)
+        btn.setTitleColor(.black, for: .normal)
+        btn.layer.cornerRadius = 5.0
+        btn.layer.borderWidth = 1.0
+        btn.layer.borderColor = UIColor.black.cgColor
+        btn.layer.masksToBounds = false
+        return btn
+    }()
+    
+    lazy var catalogButton: UIButton = {
+        let btn = UIButton()
+        btn.setTitle("  Catalog  ", for: .normal)
         btn.setTitleColor(.black, for: .normal)
         btn.layer.cornerRadius = 5.0
         btn.layer.borderWidth = 1.0
@@ -34,7 +45,7 @@ class CatalogView: CustomView {
     }
     
     private func setupUI() {
-        view.backgroundColor = .blue
+        view.backgroundColor = .green
         addSubview(view)
         view.snp.remakeConstraints { make in
             make.leading.equalTo(snp.leading)
@@ -46,6 +57,12 @@ class CatalogView: CustomView {
         loginButton.snp.remakeConstraints { make in
             make.centerX.equalTo(snp.centerX)
             make.centerY.equalTo(snp.centerY)
+        }
+        
+        view.addSubview(catalogButton)
+        catalogButton.snp.remakeConstraints { make in
+            make.centerX.equalTo(snp.centerX)
+            make.top.equalTo(loginButton.snp.bottom).offset(64)
         }
     }
 }

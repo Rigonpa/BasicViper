@@ -1,5 +1,5 @@
 //
-//  HomeRouter.swift
+//  TakePhotoRouter.swift
 //  BasicViper
 //
 //  Created by Ricardo González Pacheco on 26/08/2020.
@@ -8,18 +8,19 @@
 
 import UIKit
 
-protocol CatalogDelegate: class {
+protocol TakePhotoDelegate: class {
     func loginButtonTapped()
+    func catalogButtonTapped()
 }
 
-class CatalogRouter {
+class TakePhotoRouter {
     
-    weak var delegate: CatalogDelegate?
+    weak var delegate: TakePhotoDelegate?
     
     static func createModule() -> CustomViewController {
-        let presenter = CatalogPresenter()
-        let router = CatalogRouter()
-        let viewController = CatalogViewController()
+        let presenter = TakePhotoPresenter()
+        let router = TakePhotoRouter()
+        let viewController = TakePhotoViewController()
         
         viewController.presenter = presenter
         viewController.presenter?.router = router
@@ -29,7 +30,11 @@ class CatalogRouter {
     }
 }
 
-extension CatalogRouter: CatalogProtocolPresenterToRouter {
+extension TakePhotoRouter: TakePhotoProtocolPresenterToRouter {
+    func catalogButtonTapped() {
+        delegate?.catalogButtonTapped()
+    }
+    
     func loginButtonTapped() {
         delegate?.loginButtonTapped()
     }

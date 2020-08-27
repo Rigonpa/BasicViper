@@ -13,10 +13,12 @@ protocol CatalogProtocolViewControllerToPresenter: class {
     var router: CatalogProtocolPresenterToRouter? { get set }
     
     func loginButtonTapped()
+    func takePhotoButtonTapped()
 }
 
 protocol CatalogProtocolPresenterToRouter: class {
     func loginButtonTapped()
+    func takePhotoButtonTapped()
 }
 
 protocol CatalogProtocolPresenterToViewController: class {

@@ -27,6 +27,12 @@
 		93DE4C9C24F79AD4005DF131 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4C9B24F79AD4005DF131 /* CatalogView.swift */; };
 		93DE4C9F24F7A08E005DF131 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4C9E24F7A08E005DF131 /* FlowCoordinator.swift */; };
 		93DE4CA124F7A0A0005DF131 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4CA024F7A0A0005DF131 /* MainFlow.swift */; };
+		93DE4CA424F7C5AB005DF131 /* TakePhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4CA324F7C5AB005DF131 /* TakePhotoRouter.swift */; };
+		93DE4CA624F7C5C7005DF131 /* TakePhotoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4CA524F7C5C7005DF131 /* TakePhotoPresenter.swift */; };
+		93DE4CA824F7C5D8005DF131 /* TakePhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4CA724F7C5D8005DF131 /* TakePhotoViewController.swift */; };
+		93DE4CAA24F7C5E5005DF131 /* TakePhotoContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4CA924F7C5E5005DF131 /* TakePhotoContract.swift */; };
+		93DE4CAC24F7C5F4005DF131 /* TakePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4CAB24F7C5F4005DF131 /* TakePhotoView.swift */; };
+		93DE4CAE24F7C8A4005DF131 /* PhotoFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DE4CAD24F7C8A4005DF131 /* PhotoFlow.swift */; };
 		93E3760724F6B2D8006CD5EB /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760624F6B2D8006CD5EB /* HomeRouter.swift */; };
 		93E3760924F6B30E006CD5EB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760824F6B30E006CD5EB /* LoginView.swift */; };
 		93E3760B24F6B87E006CD5EB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E3760A24F6B87E006CD5EB /* HomePresenter.swift */; };
@@ -59,6 +65,12 @@
 		93DE4C9B24F79AD4005DF131 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		93DE4C9E24F7A08E005DF131 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
 		93DE4CA024F7A0A0005DF131 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
+		93DE4CA324F7C5AB005DF131 /* TakePhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoRouter.swift; sourceTree = "<group>"; };
+		93DE4CA524F7C5C7005DF131 /* TakePhotoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoPresenter.swift; sourceTree = "<group>"; };
+		93DE4CA724F7C5D8005DF131 /* TakePhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoViewController.swift; sourceTree = "<group>"; };
+		93DE4CA924F7C5E5005DF131 /* TakePhotoContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoContract.swift; sourceTree = "<group>"; };
+		93DE4CAB24F7C5F4005DF131 /* TakePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoView.swift; sourceTree = "<group>"; };
+		93DE4CAD24F7C8A4005DF131 /* PhotoFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFlow.swift; sourceTree = "<group>"; };
 		93E3760624F6B2D8006CD5EB /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		93E3760824F6B30E006CD5EB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		93E3760A24F6B87E006CD5EB /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -88,7 +100,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9393D25324F679BA00172953 /* Login */ = {
+		9393D25324F679BA00172953 /* 1_Login */ = {
 			isa = PBXGroup;
 			children = (
 				9393D25424F679E600172953 /* LoginRouter.swift */,
@@ -97,15 +109,16 @@
 				9393D25A24F67A2B00172953 /* LoginContract.swift */,
 				93E3760824F6B30E006CD5EB /* LoginView.swift */,
 			);
-			path = Login;
+			path = 1_Login;
 			sourceTree = "<group>";
 		};
 		9393D25C24F6A79000172953 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				93DE4C9224F79A26005DF131 /* Catalog */,
-				93E3760524F6B2B9006CD5EB /* Home */,
-				9393D25324F679BA00172953 /* Login */,
+				93DE4CA224F7C55E005DF131 /* 4_TakePhoto */,
+				93DE4C9224F79A26005DF131 /* 3_Catalog */,
+				93E3760524F6B2B9006CD5EB /* 2_Home */,
+				9393D25324F679BA00172953 /* 1_Login */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -141,8 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				9393D25D24F6A7A700172953 /* CustomClasses */,
-				9393D25C24F6A79000172953 /* Scenes */,
 				93BBE06524F666D7001AA655 /* Infraestructure */,
+				9393D25C24F6A79000172953 /* Scenes */,
 				93BBE04D24F661F1001AA655 /* AppDelegate.swift */,
 				93BBE04F24F661F1001AA655 /* SceneDelegate.swift */,
 				93BBE05624F661F3001AA655 /* Assets.xcassets */,
@@ -162,7 +175,7 @@
 			path = Infraestructure;
 			sourceTree = "<group>";
 		};
-		93DE4C9224F79A26005DF131 /* Catalog */ = {
+		93DE4C9224F79A26005DF131 /* 3_Catalog */ = {
 			isa = PBXGroup;
 			children = (
 				93DE4C9324F79A99005DF131 /* CatalogRouter.swift */,
@@ -171,7 +184,7 @@
 				93DE4C9924F79ACC005DF131 /* CatalogContract.swift */,
 				93DE4C9B24F79AD4005DF131 /* CatalogView.swift */,
 			);
-			path = Catalog;
+			path = 3_Catalog;
 			sourceTree = "<group>";
 		};
 		93DE4C9D24F7A06E005DF131 /* Flow */ = {
@@ -179,11 +192,24 @@
 			children = (
 				93DE4C9E24F7A08E005DF131 /* FlowCoordinator.swift */,
 				93DE4CA024F7A0A0005DF131 /* MainFlow.swift */,
+				93DE4CAD24F7C8A4005DF131 /* PhotoFlow.swift */,
 			);
 			path = Flow;
 			sourceTree = "<group>";
 		};
-		93E3760524F6B2B9006CD5EB /* Home */ = {
+		93DE4CA224F7C55E005DF131 /* 4_TakePhoto */ = {
+			isa = PBXGroup;
+			children = (
+				93DE4CA324F7C5AB005DF131 /* TakePhotoRouter.swift */,
+				93DE4CA524F7C5C7005DF131 /* TakePhotoPresenter.swift */,
+				93DE4CA724F7C5D8005DF131 /* TakePhotoViewController.swift */,
+				93DE4CA924F7C5E5005DF131 /* TakePhotoContract.swift */,
+				93DE4CAB24F7C5F4005DF131 /* TakePhotoView.swift */,
+			);
+			path = 4_TakePhoto;
+			sourceTree = "<group>";
+		};
+		93E3760524F6B2B9006CD5EB /* 2_Home */ = {
 			isa = PBXGroup;
 			children = (
 				93E3760624F6B2D8006CD5EB /* HomeRouter.swift */,
@@ -192,7 +218,7 @@
 				93E3760E24F6B896006CD5EB /* HomeContract.swift */,
 				93E3761024F6B8A4006CD5EB /* HomeView.swift */,
 			);
-			path = Home;
+			path = 2_Home;
 			sourceTree = "<group>";
 		};
 		FA0A5078CD4E9B1ADF4453DE /* Pods */ = {
@@ -321,13 +347,18 @@
 				93BBE04E24F661F1001AA655 /* AppDelegate.swift in Sources */,
 				93E3760724F6B2D8006CD5EB /* HomeRouter.swift in Sources */,
 				93BBE06224F6646F001AA655 /* Manager.swift in Sources */,
+				93DE4CAE24F7C8A4005DF131 /* PhotoFlow.swift in Sources */,
 				9393D25724F679F500172953 /* LoginPresenter.swift in Sources */,
 				93E3760F24F6B896006CD5EB /* HomeContract.swift in Sources */,
+				93DE4CA424F7C5AB005DF131 /* TakePhotoRouter.swift in Sources */,
+				93DE4CAA24F7C5E5005DF131 /* TakePhotoContract.swift in Sources */,
 				93DE4C9A24F79ACC005DF131 /* CatalogContract.swift in Sources */,
 				93E3761124F6B8A4006CD5EB /* HomeView.swift in Sources */,
 				9393D25524F679E600172953 /* LoginRouter.swift in Sources */,
 				93E3760D24F6B88C006CD5EB /* HomeViewController.swift in Sources */,
 				9393D25B24F67A2B00172953 /* LoginContract.swift in Sources */,
+				93DE4CA624F7C5C7005DF131 /* TakePhotoPresenter.swift in Sources */,
+				93DE4CAC24F7C5F4005DF131 /* TakePhotoView.swift in Sources */,
 				93DE4C9624F79AB8005DF131 /* CatalogPresenter.swift in Sources */,
 				9393D25924F67A0000172953 /* LoginViewController.swift in Sources */,
 				93E3760B24F6B87E006CD5EB /* HomePresenter.swift in Sources */,
@@ -337,6 +368,7 @@
 				93BBE05024F661F1001AA655 /* SceneDelegate.swift in Sources */,
 				9393D25F24F6A7CA00172953 /* CustomViewController.swift in Sources */,
 				93E3760924F6B30E006CD5EB /* LoginView.swift in Sources */,
+				93DE4CA824F7C5D8005DF131 /* TakePhotoViewController.swift in Sources */,
 				93DE4C9C24F79AD4005DF131 /* CatalogView.swift in Sources */,
 				93BBE06424F665A8001AA655 /* ServiceManager.swift in Sources */,
 				93DE4C9424F79A99005DF131 /* CatalogRouter.swift in Sources */,

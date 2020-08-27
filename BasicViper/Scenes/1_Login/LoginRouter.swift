@@ -13,7 +13,9 @@ protocol LoginDelegate: class {
 }
 
 class LoginRouter {
+    
     weak var delegate: LoginDelegate?
+    
     static func createModule() -> CustomViewController {
         let presenter = LoginPresenter()
         let router = LoginRouter()

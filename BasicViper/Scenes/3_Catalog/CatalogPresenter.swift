@@ -14,6 +14,10 @@ class CatalogPresenter {
 }
 
 extension CatalogPresenter: CatalogProtocolViewControllerToPresenter {
+    func takePhotoButtonTapped() {
+        router?.takePhotoButtonTapped()
+    }
+    
     func loginButtonTapped() {
         router?.loginButtonTapped()
     }

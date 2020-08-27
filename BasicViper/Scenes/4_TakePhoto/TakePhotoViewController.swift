@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  TakePhotoViewController.swift
 //  BasicViper
 //
 //  Created by Ricardo González Pacheco on 26/08/2020.
@@ -8,14 +8,14 @@
 
 import UIKit
 
-class CatalogViewController: CustomViewController {
+class TakePhotoViewController: CustomViewController {
     
-    var presenter: CatalogProtocolViewControllerToPresenter?
+    var presenter: TakePhotoProtocolViewControllerToPresenter?
     
-    var v: CatalogView {
+    var v: TakePhotoView {
         get {
-            guard let vi = view as? CatalogView else {
-                return CatalogView()
+            guard let vi = view as? TakePhotoView else {
+                return TakePhotoView()
             }
             return vi
         }
@@ -36,15 +36,20 @@ class CatalogViewController: CustomViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Catalog"
+        title = "Take photo"
         v.loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
+        v.catalogButton.addTarget(self, action: #selector(catalogButtonTapped), for: .touchUpInside)
     }
     
     @objc private func loginButtonTapped() {
         presenter?.loginButtonTapped()
     }
+    
+    @objc private func catalogButtonTapped() {
+        presenter?.catalogButtonTapped()
+    }
 }
 
-extension CatalogViewController: CatalogProtocolPresenterToViewController {
+extension TakePhotoViewController: TakePhotoProtocolPresenterToViewController {
     
 }
